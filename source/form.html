@@ -10,16 +10,17 @@
 
 <body class="page">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-        alt="Магазин Мишка">
-    </a>
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+      </a>
+      <button class="header-nav__toggle" type="button">Открыть меню</button>
+    </div>
     <nav class="header-nav">
-      <button class="header-nav__toggle" type="button">Открать меню</button>
       <div class="header-nav__wrapper">
-        <ul class="header-nav__list site-list">
+        <ul class="header-nav__list site-list list-drop">
           <li class="site-list__item">
-            <a href="#">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a href="#">Вязание на заказ</a>
@@ -37,7 +38,7 @@
 
   <main class="page-main">
     <div class="content-wrapper">
-      <h1 class="page-main__title">Вязание на заказ</h1>
+      <h2 class="page-main__title second-title">Вязание на заказ</h2>
     </div>
     <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
@@ -125,16 +126,16 @@
   </main>
 
   <footer class="page-footer">
-    <ul class="page-footer__social social">
+    <ul class="page-footer__social social list-drop">
       <li class="social__item">
-        <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в
+        <a class="social__link social__link--instagram" href="#">1<span class="visually-hidden">Мы в
             Инстаграме</span></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--facebook" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a class="social__link social__link--facebook" href="">2<span class="visually-hidden">Мы в Фейсбуке</span></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--twitter" href=""><span class="visually-hidden">Мы в Вконтакте</span></a>
+        <a class="social__link social__link--twitter" href="">3<span class="visually-hidden">Мы в Вконтакте</span></a>
       </li>
     </ul>
 
