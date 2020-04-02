@@ -4,75 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page">
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-        alt="Магазин Мишка">
-    </a>
-    <nav class="header-nav">
-      <button class="header-nav__toggle" type="button">Открыть меню</button>
-      <div class="header-nav__wrapper">
-        <ul class="header-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+    <div class="page-header__inner container">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+        </a>
+        <button class="page-header__toggle" type="button">Открыть меню</button>
       </div>
-    </nav>
+      <nav class="header-nav">
+        <div class="header-nav__wrapper">
+          <ul class="header-nav__list">
+            <li class="header-nav__item header-nav__item--active">
+              <a>Каталог товаров</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
-    <div class="content-wrapper">
-      <h1 class="page-main__title">Каталог товаров</h1>
+    <div class="page-main__header">
+      <div class="page-main__inner container">
+        <h2 class="page-main__title">Каталог товаров</h2>
+      </div>
     </div>
     <section class="catalog">
-      <h2 class="visually-hidden">Каталог товаров</h2>
-      <ul class="catalog__list">
-        <li class="catalog__item card-product">
-          <a class="card-product__img" href="#">
-            <img src="https://via.placeholder.com/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
-          </a>
-          <h3 class="card-product__title">
-            <a class="card-product__link" href="#">Зайчик-попрыгайчик</a>
-          </h3>
-          <p class="card-product__description">Рост 30 см, вес 200 г</p>
-          <p class="card-product__price">1 200 руб.</p>
-        </li>
+      <div class="catalog__inner container">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <ul class="catalog-list">
+          <li class="catalog-list__item">
+            <a class="catalog-list__img" href="#">
+              <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+            </a>
+            <h4 class="catalog-list__title">
+              <a class="catalog-list__link" href="#">Зайчик-попрыгайчик</a>
+            </h4>
+            <p class="catalog-list__description">Рост 30 см, вес 200 г</p>
+            <p class="catalog-list__price">1 200 руб.</p>
+          </li>
 
-        <li class="catalog__item card-product">
-          <a class="card-product__img" href="#">
-            <img src="https://via.placeholder.com/260x195" alt="Корзинка для белья" width="260" height="195">
-          </a>
-          <h3 class="card-product__title">
-            <a class="card-product__link" href="#">Корзинка для белья</a>
-          </h3>
-          <p class="card-product__description">Диаметр 15 см, высота 10 см</p>
-          <p class="card-product__price">690 руб.</p>
-        </li>
+          <li class="catalog-list__item">
+            <a class="catalog-list__img" href="#">
+              <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+            </a>
+            <h4 class="catalog-list__title">
+              <a class="catalog-list__link" href="#">Корзинка для белья</a>
+            </h4>
+            <p class="catalog-list__description">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog-list__price">690 руб.</p>
+          </li>
 
-        <li class="catalog__item card-product">
-          <a class="card-product__img" href="#">
-            <img src="https://via.placeholder.com/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
-          </a>
-          <h3 class="card-product__title">
-            <a class="card-product__link" href="#">Большая корзинка для игрушек</a>
-          </h3>
-          <p class="card-product__description">Диаметр 30 см, высота 30 см</p>
-          <p class="card-product__price">1 500 руб.</p>
-        </li>
-      </ul>
+          <li class="catalog-list__item">
+            <a class="catalog-list__img" href="#">
+              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+            </a>
+            <h4 class="catalog-list__title">
+              <a class="catalog-list__link" href="#">Большая корзинка для игрушек</a>
+            </h4>
+            <p class="catalog-list__description">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog-list__price">1 500 руб.</p>
+          </li>
+        </ul>
+
+        <form class="form-to-cart" action="https://echo.htmlacademy.ru" method="get">
+          <h3 class="form-to-cart__title">Добавить в корзину</h3>
+          <p class="form-to-cart__text">Выберите размер:</p>
+          <div class="choose-size">
+            <input class="choose-size__input" type="radio" id="size-s" name="size" checked>
+            <label class="choose-size__label" for="size-s">S</label>
+            <input class="choose-size__input" type="radio" id="size-m" name="size">
+            <label class="choose-size__label" for="size-m">M</label>
+            <input class="choose-size__input" type="radio" id="size-l" name="size">
+            <label class="choose-size__label" for="size-l">L</label>
+          </div>
+          <button class="form-to-cart_btn btn--modal">Добавить</button>
+        </form>
+      </div>
     </section>
     <section class="production">
       <h3 class="production__title">Процесс производства</h3>
@@ -84,22 +106,24 @@
   </main>
 
   <footer class="page-footer">
-    <ul class="page-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в
-            Инстаграме</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href=""><span class="visually-hidden">Мы в Вконтакте</span></a>
-      </li>
-    </ul>
+    <div class="page-footer__inner container">
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">1<span class="visually-hidden">Мы в
+              Инстаграме</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="">2<span class="visually-hidden">Мы в Фейсбуке</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="">3<span class="visually-hidden">Мы в Вконтакте</span></a>
+        </li>
+      </ul>
 
-    <div class="page-footer__copiright copiright">
-      <p class="copiright__text">Разработано</p>
-      <a class="copiright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <div class="page-footer__copiright copiright">
+        <p class="copiright__text">Разработано</p>
+        <a class="copiright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      </div>
     </div>
   </footer>
 </body>
