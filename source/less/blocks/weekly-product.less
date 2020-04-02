@@ -20,16 +20,24 @@
 }
 
 .weekly-product__price,
-.weekly-product__order {
+.weekly-product__btn {
   color: @color-promo-list;
   font-weight: 700;
   font-size: 17px;
 }
 
-.weekly-product__order {
+.weekly-product__price {
+  text-align: center;
+}
+
+.weekly-product__btn {
   text-transform: uppercase;
   line-height: 20px;
   border: 2px solid @color-promo-list;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
 }
 
 .weekly-product__title {
@@ -37,4 +45,18 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
+}
+
+.weekly-product__cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.weekly-product__field,
+.weekly-product__value {
+  padding-top: 5px;
+}
+
+.weekly-product__value {
+  padding-left: 20px;
 }
