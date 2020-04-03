@@ -1,0 +1,36 @@
+.site-navigation {
+  margin: 0;
+  padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    order: 1;
+    width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    width: 400px;
+  }
+}
+
+.site-navigation__link {
+  text-decoration: none;
+  padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    margin-right: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.site-navigation__item {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  border-top: 1px solid @gray;
+  list-style: none;
+}

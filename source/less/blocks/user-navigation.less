@@ -1,0 +1,38 @@
+.user-navigation {
+  margin: 0;
+  padding-left: 0;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 398px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.user-navigation__link {
+  padding-left: 46px;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+
+  &--basket {
+    @media (min-width: @tablet-width) {
+      padding-left: 84px;
+    }
+  }
+}
+
+.user-navigation__item {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  border-top: 1px solid @gray;
+  list-style: none;
+}
