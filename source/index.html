@@ -41,9 +41,9 @@
   <main class="page-main">
     <h1 class="visually-hidden">Мишка — интернет-магазин игрушек ручной работы</h1>
 
-    <section class="promo">
+    <section class="promo promo--index">
       <div class="promo__inner container">
-        <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+        <h2 class="promo__title promo__title--index">Милые штуки ручной работы для дома</h2>
         <ul class="promo__list">
           <li class="promo__item promo__item--first-promo">
             <a href="#" class="promo__link"><span>Предметы интерьера</span></a>
@@ -62,15 +62,15 @@
         <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и
           трех размерах.</p>
         <table class="weekly-product__options">
-          <tr>
+          <tr class="weekly-product__cell">
             <td class="weekly-product__field">Цвет:</td>
             <td class="weekly-product__value">«Тиффани»/серый</td>
           </tr>
-          <tr>
+          <tr class="weekly-product__cell">
             <td class="weekly-product__field">Диаметр:</td>
             <td class="weekly-product__value">25 см</td>
           </tr>
-          <tr>
+          <tr class="weekly-product__cell">
             <td class="weekly-product__field">Высота:</td>
             <td class="weekly-product__value">15 см</td>
           </tr>
@@ -78,7 +78,7 @@
         <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
           alt="Вязанные корзинки">
         <p class="weekly-product__price">Цена: 990 руб.</p>
-        <a href="#" class="weekly-product__order btn">Заказать</a>
+        <a href="#" class="weekly-product__btn btn">Заказать</a>
       </div>
     </section>
 
@@ -97,44 +97,51 @@
     </section>
 
     <section class="reviews">
-      <div class="reviews__wrapper slider">
+      <div class="reviews__inner container">
         <h3 class="reviews__title">Отзывы</h3>
-        <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
               лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
               фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <p class="reviews__autor">
-              <span class="reviews__autor-name">Анастасия Красильникова</span>
-              <a class="reviews__autor-site" href="#">@misssssiskras</a>
+            <p class="reviews__author">
+              <span class="reviews__author-name">Анастасия Красильникова</span>
+              <a class="reviews__author-site" href="#">@misssssiskras</a>
             </p>
           </blockquote>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle" type="button">Назад</button>
-          <button class="slider__toggle" type="button">Вперед</button>
+        <p class="reviews__toggles">
+          <button class="reviews__toggle" type="button">Назад</button>
+          <button class="reviews__toggle" type="button">Вперед</button>
         </p>
         <a href="#" class="reviews__link btn">Написать</a>
       </div>
     </section>
 
     <section class="contacts">
-      <h3 class="contacts__title">Контакты</h3>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <span class="contacts__name">e-mail:</span>
-          <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </li>
-        <li class="contacts__item">
-          <span class="contacts__name">адрес:</span>
-          <p class="contacts__text">г. Санкт-Петербург,
-            ул. Большая Конюшенная,
-            д. 19/8, офис 101</p>
-        </li>
-      </ul>
-      <img class="contacts__map" src=https://via.placeholder.com/322x457
-        alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-      <a class="contacts__btn btn" href="#">Напишите нам</a>
+      <div class="contacts__inner container">
+        <p class="contacts__title">Контакты</p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span class="contacts__name">e-mail:</span>
+            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__name">адрес:</span>
+            <p class="contacts__text">г. Санкт-Петербург,
+              ул. Большая Конюшенная,
+              д. 19/8, офис 101</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contacts__map map">
+        <div class="map__inner container">
+          <img class="map__img" src="img/map-mobile@1x.jpg"
+            alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <a class="map__btn btn" href="#">Напишите нам</a>
+        </div>
+      </div>
     </section>
   </main>
 

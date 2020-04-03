@@ -1,10 +1,17 @@
 .order-form {
   outline: 1px solid red;
   padding-top: 30px;
+  padding-bottom: 55px;
 }
 
-.order-form p {
+.order-form__description,
+.order-form__input-wrapper,
+.order-form__required {
   margin: 0;
+}
+
+.order-form__input-wrapper {
+  border: 0;
 }
 
 .order-form__description {
@@ -33,4 +40,23 @@
 .order-form__fieldset p {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.order-form__required {
+  margin-top: 18px;
+}
+
+.order-form__btn {
+  text-transform: uppercase;
+  border: 2px solid @color-promo-list;
+  color: @color-promo-list;
+  line-height: 16px;
+  font-weight: 700;
+  font-size: 17px;
+  width: 100%;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  margin-top: 31px;
 }
