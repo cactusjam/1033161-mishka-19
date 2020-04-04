@@ -1,11 +1,38 @@
 .page-footer {
   outline: 1px solid red;
   background-color: @bg-color-footer;
-  padding: 30px 0;
 }
 
-.copiright__text {
+.page-footer__inner.container {
+  padding-top: 30px;
+  min-height: 143px;
+}
+
+.page-footer__copiright-text {
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+  margin: 0;
+}
+
+.page-footer__copiright {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.page-footer__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

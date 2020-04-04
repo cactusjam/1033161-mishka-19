@@ -10,11 +10,61 @@
   font-weight: 700;
   padding-top: 86px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  &--like {
+    @media (min-width: @tablet-width) {
+      order: 5;
+    }
+  }
+
+  &--style {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+  }
+
+  &--handmade {
+    @media (min-width: @tablet-width) {
+      order: 2;
+    }
+  }
+
+  &--support {
+    @media (min-width: @tablet-width) {
+      order: 4;
+    }
+  }
+
+  &--package {
+    @media (min-width: @tablet-width) {
+      order: 6;
+    }
+  }
 }
 
 .about-us__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.about-us__inner.container {
+  @media (min-width: @desktop-width) {
+    padding-left: 225px;
+  }
 }
 
 .about-us__title {

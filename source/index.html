@@ -30,7 +30,7 @@
             <a class="user-navigation__link user-navigation__link--search" href="#">Поиск по сайту</a>
           </li>
           <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--basket"href="#">Корзина: пока пуста</a>
+            <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
         <ul class="header-nav__offer-list offer-navigation">
@@ -65,28 +65,42 @@
 
     <section class="weekly-product">
       <div class="weekly-product__inner container">
-        <h3 class="weekly-product__title">Вязаные корзинки</h3>
-        <p class="weekly-product__subtitle">ТОВАР НЕДЕЛИ</p>
-        <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и
-          трех размерах.</p>
-        <table class="weekly-product__options">
-          <tr class="weekly-product__cell">
-            <td class="weekly-product__field">Цвет:</td>
-            <td class="weekly-product__value">«Тиффани»/серый</td>
-          </tr>
-          <tr class="weekly-product__cell">
-            <td class="weekly-product__field">Диаметр:</td>
-            <td class="weekly-product__value">25 см</td>
-          </tr>
-          <tr class="weekly-product__cell">
-            <td class="weekly-product__field">Высота:</td>
-            <td class="weekly-product__value">15 см</td>
-          </tr>
-        </table>
-        <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
-          alt="Вязанные корзинки">
-        <p class="weekly-product__price">Цена: 990 руб.</p>
-        <a href="#" class="weekly-product__btn btn">Заказать</a>
+        <div class="weekly-product__caption">
+          <h3 class="weekly-product__title">Вязаные корзинки</h3>
+          <p class="weekly-product__subtitle">ТОВАР НЕДЕЛИ</p>
+        </div>
+
+        <div class="weekly-product__content">
+          <div class="weekly-product__wrapper-description">
+            <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
+              и
+              трех размерах.</p>
+            <table class="weekly-product__options">
+              <tr class="weekly-product__cell">
+                <td class="weekly-product__field">Цвет:</td>
+                <td class="weekly-product__value">«Тиффани»/серый</td>
+              </tr>
+              <tr class="weekly-product__cell">
+                <td class="weekly-product__field">Диаметр:</td>
+                <td class="weekly-product__value">25 см</td>
+              </tr>
+              <tr class="weekly-product__cell">
+                <td class="weekly-product__field">Высота:</td>
+                <td class="weekly-product__value">15 см</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="weekly-product__image-wrapper">
+            <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
+              alt="Вязанные корзинки">
+          </div>
+          <div class="weekly-product__order">
+            <p class="weekly-product__price">Цена: 990 руб.</p>
+            <a href="#" class="weekly-product__btn btn">Заказать</a>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -94,12 +108,12 @@
       <div class="about-us__inner container">
         <h3 class="about-us__title">Коротко о нас:</h3>
         <ul class="about-us__list">
-          <li class="about-us__item about-us__item--eko">Экологически чистые материалы</li>
-          <li class="about-us__item about-us__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--handmade">Связано вручную с любовью и умилением</li>
+          <li class="about-us__item about-us__item--eko">Экологически чистые&nbsp;материалы</li>
+          <li class="about-us__item about-us__item--style">Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="about-us__item about-us__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="about-us__item about-us__item--handmade">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
           <li class="about-us__item about-us__item--support">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--package">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item about-us__item--package">Поставляется в подарочной&nbsp;упаковке</li>
         </ul>
       </div>
     </section>
@@ -155,6 +169,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner container">
+      <a class="page-footer__logo">Логотип</a>
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--instagram" href="#">1<span class="visually-hidden">Мы в
@@ -168,9 +183,9 @@
         </li>
       </ul>
 
-      <div class="page-footer__copiright copiright">
-        <p class="copiright__text">Разработано</p>
-        <a class="copiright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <div class="page-footer__copiright">
+        <p class="page-footer__copiright-text">Разработано</p>
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
       </div>
     </div>
   </footer>
