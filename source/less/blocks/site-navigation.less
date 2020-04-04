@@ -5,25 +5,30 @@
   @media (min-width: @tablet-width) {
     display: flex;
     order: 1;
-    width: 500px;
+    width: 350px;
   }
 
   @media (min-width: @desktop-width) {
     order: 0;
-    width: 400px;
+    width: 436px;
   }
 }
 
 .site-navigation__link {
   text-decoration: none;
   padding-left: 46px;
+  color: @black;
+  font-weight: 700;
+  font-size: 17px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
     margin-right: 37px;
+    font-size: 15px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 17px;
     margin-right: 0;
   }
 }
@@ -33,4 +38,16 @@
   padding-bottom: 22px;
   border-top: 1px solid @gray;
   list-style: none;
+
+  &--catalog {
+    @media (min-width: @desktop-width) {
+      padding-right: 35px;
+    }
+  }
+
+  &--order {
+    @media (min-width: @desktop-width) {
+      padding-left: 35px;
+    }
+  }
 }
