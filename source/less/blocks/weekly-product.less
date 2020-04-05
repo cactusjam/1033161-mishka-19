@@ -4,10 +4,21 @@
 }
 
 .weekly-product__subtitle {
-  color: @blue;
   font-weight: 700;
-  margin: 0;
   line-height: 20px;
+  color: @blue;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    line-height: 17px;
+    font-size: 17px;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 47px;
+  }
 }
 
 .promo__list {
@@ -23,6 +34,7 @@
   color: @color-promo-list;
   font-weight: 700;
   font-size: 17px;
+  align-self: center;
 }
 
 .weekly-product__price {
@@ -48,11 +60,14 @@
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    margin-right: 150px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
+    margin-left: 58px;
+    margin-right: auto;
   }
 }
 
@@ -77,6 +92,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row-reverse;
   }
 }
 
@@ -111,7 +130,7 @@
   @media (min-width: @tablet-width) {
     width: 290px;
     order: 1;
-    height: 195px;
+    height: 252px;
   }
 }
 

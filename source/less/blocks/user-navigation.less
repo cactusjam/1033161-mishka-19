@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    height: 88px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,14 +33,20 @@
   }
 }
 
+.user-navigation__link-text {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .user-navigation__item {
-  padding-top: 21px;
-  padding-bottom: 22px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid @gray;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    border: none;
+    align-content: center;
   }
 }

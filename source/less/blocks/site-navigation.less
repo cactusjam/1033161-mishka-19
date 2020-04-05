@@ -11,6 +11,7 @@
   @media (min-width: @desktop-width) {
     order: 0;
     width: 436px;
+    height: 88px;
   }
 }
 
@@ -34,24 +35,30 @@
 }
 
 .site-navigation__item {
-  padding-top: 21px;
-  padding-bottom: 22px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid @gray;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 
   &--catalog {
     @media (min-width: @desktop-width) {
       padding-right: 35px;
-      padding-top: 35px;
-      padding-bottom: 35px;
     }
   }
 
   &--order {
     @media (min-width: @desktop-width) {
       padding-left: 35px;
-      padding-top: 35px;
-      padding-bottom: 35px;
     }
   }
 }

@@ -6,13 +6,30 @@
   height: 150px;
 }
 
+.production__video-wrapper {
+  position: relative;
+  width: 258px;
+  height: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 682px;
+  }
+}
+
 .production__video-button {
   background-image: url("../img/icon-play.svg");
   width: 101px;
   height: 77px;
   border: 0;
   background-color: transparent;
-  transform: translate(79px, -121px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 
