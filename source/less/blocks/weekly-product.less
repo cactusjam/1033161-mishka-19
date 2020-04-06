@@ -1,14 +1,24 @@
 .weekly-product {
-  padding-top: 120px;
   outline: 1px solid red;
   padding-bottom: 36px;
 }
 
 .weekly-product__subtitle {
-  color: @blue;
   font-weight: 700;
-  margin: 0;
   line-height: 20px;
+  color: @blue;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    line-height: 17px;
+    font-size: 17px;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 47px;
+  }
 }
 
 .promo__list {
@@ -24,6 +34,7 @@
   color: @color-promo-list;
   font-weight: 700;
   font-size: 17px;
+  align-self: center;
 }
 
 .weekly-product__price {
@@ -45,6 +56,19 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    margin-right: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 58px;
+    margin-right: auto;
+  }
 }
 
 .weekly-product__cell {
@@ -59,4 +83,70 @@
 
 .weekly-product__value {
   padding-left: 20px;
+}
+
+.weekly-product__caption {
+  padding-top: 170px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row-reverse;
+  }
+}
+
+.weekly-product__description {
+  margin: 0;
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-bottom: 50px;
+  }
+}
+
+.weekly-product__content {
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 470px;
+    margin-top: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-content: stretch;
+    padding-left: 175px;
+  }
+}
+
+.weekly-product__wrapper-description {
+  @media (min-width: @tablet-width) {
+    width: 290px;
+    order: 1;
+    height: 252px;
+  }
+}
+
+.weekly-product__image-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    order: 3;
+    height: 428px;
+  }
+}
+
+.weekly-product__order {
+  @media (min-width: @tablet-width) {
+    width: 290px;
+    order: 2;
+    height: 138px;
+    margin-top: 52px;
+  }
 }

@@ -1,0 +1,52 @@
+.user-navigation {
+  margin: 0;
+  padding-left: 0;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.user-navigation__link {
+  font-size: 17px;
+  font-weight: 700;
+  color: @black;
+  padding-left: 46px;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+
+  &--basket {
+    @media (min-width: @tablet-width) {
+      padding-left: 84px;
+    }
+  }
+}
+
+.user-navigation__link-text {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.user-navigation__item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid @gray;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    align-content: center;
+  }
+}

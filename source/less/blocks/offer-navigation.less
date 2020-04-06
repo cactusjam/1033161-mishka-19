@@ -1,0 +1,29 @@
+.offer-navigation__link {
+  text-decoration: none;
+  color: @black;
+  font-weight: 700;
+}
+
+.offer-navigation {
+  margin: 0;
+  padding-left: 0;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    order: 3;
+  }
+}
+
+.offer-navigation__item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid @gray;
+  list-style: none;
+
+  &:not(:last-child) {
+    @media (min-width: @desktop-width) {
+      margin-right: 60px;
+    }
+  }
+}
