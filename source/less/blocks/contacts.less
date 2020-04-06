@@ -8,20 +8,56 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .contacts__list {
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .contacts__item {
   list-style: none;
   color: @greyish-brown;
   line-height: 30px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 55px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .contacts__link {
   text-decoration: none;
   color: @greyish-brown;
+}
+
+.contacts__text {
+  margin: 0;
+  width: 156px;
+
+  @media (min-width: @tablet-width) {
+    width: 219px;
+  }
+}
+
+.contacts__name {
+  margin-right: 26px;
 }
