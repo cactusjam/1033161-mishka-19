@@ -88,6 +88,12 @@
     }
   }
 
+  &--color {
+    @media (min-width: @tablet-width) {
+      width: 230px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     padding-bottom: 23px;
@@ -185,18 +191,12 @@
   @media (min-width: @desktop-width) {
     margin-left: 111px;
   }
-}
 
-.order-form__list-color {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.order-form__item-color {
-  @media (min-width: @tablet-width) {
-    width: 230px;
+  &--color {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
 
