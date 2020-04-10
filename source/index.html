@@ -27,7 +27,8 @@
         </ul>
         <ul class="header-nav__user-list user-navigation">
           <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--search" href="#"><span class="user-navigation__link-text">Поиск по сайту</span></a>
+            <a class="user-navigation__link user-navigation__link--search" href="#"><span
+                class="user-navigation__link-text">Поиск по сайту</span></a>
           </li>
           <li class="user-navigation__item">
             <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
@@ -70,36 +71,37 @@
           <p class="weekly-product__subtitle">ТОВАР НЕДЕЛИ</p>
         </div>
 
-        <div class="weekly-product__content">
-          <div class="weekly-product__wrapper-description">
-            <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
-              и
-              трех размерах.</p>
-            <table class="weekly-product__options">
-              <tr class="weekly-product__cell">
-                <td class="weekly-product__field">Цвет:</td>
-                <td class="weekly-product__value">«Тиффани»/серый</td>
-              </tr>
-              <tr class="weekly-product__cell">
-                <td class="weekly-product__field">Диаметр:</td>
-                <td class="weekly-product__value">25 см</td>
-              </tr>
-              <tr class="weekly-product__cell">
-                <td class="weekly-product__field">Высота:</td>
-                <td class="weekly-product__value">15 см</td>
-              </tr>
-            </table>
+        <div class="weekly-product__content-wrapper">
+          <div class="weekly-product__content">
+            <div class="weekly-product__wrapper-description">
+              <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести
+                расцветках и трех размерах.</p>
+              <table class="weekly-product__options">
+                <tr class="weekly-product__cell">
+                  <td class="weekly-product__field">Цвет:</td>
+                  <td class="weekly-product__value">«Тиффани»/серый</td>
+                </tr>
+                <tr class="weekly-product__cell">
+                  <td class="weekly-product__field">Диаметр:</td>
+                  <td class="weekly-product__value">25 см</td>
+                </tr>
+                <tr class="weekly-product__cell">
+                  <td class="weekly-product__field">Высота:</td>
+                  <td class="weekly-product__value">15 см</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="weekly-product__image-wrapper">
+              <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
+                alt="Вязанные корзинки">
+            </div>
           </div>
 
-          <div class="weekly-product__image-wrapper">
-            <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
-              alt="Вязанные корзинки">
-          </div>
           <div class="weekly-product__order">
             <p class="weekly-product__price">Цена: 990 руб.</p>
             <a href="#" class="weekly-product__btn btn">Заказать</a>
           </div>
-
         </div>
       </div>
     </section>
@@ -121,17 +123,15 @@
     <section class="reviews">
       <div class="reviews__inner container">
         <h3 class="reviews__title">Отзывы</h3>
-        <div class="reviews__list">
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-              лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
-              фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <p class="reviews__author">
-              <span class="reviews__author-name">Анастасия Красильникова</span>
-              <a class="reviews__author-site" href="#">@misssssiskras</a>
-            </p>
-          </blockquote>
-        </div>
+        <blockquote class="reviews__content">
+          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+            лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+            фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <p class="reviews__author">
+            <span class="reviews__author-name">Анастасия Красильникова</span>
+            <a class="reviews__author-site" href="#">@misssssiskras</a>
+          </p>
+        </blockquote>
         <p class="reviews__toggles">
           <button class="reviews__toggle" type="button">Назад</button>
           <button class="reviews__toggle" type="button">Вперед</button>
@@ -142,26 +142,31 @@
 
     <section class="contacts">
       <div class="contacts__inner container">
-        <p class="contacts__title">Контакты</p>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <span class="contacts__name">e-mail:</span>
-            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </li>
-          <li class="contacts__item">
-            <span class="contacts__name">адрес:</span>
-            <p class="contacts__text">г. Санкт-Петербург,
-              ул. Большая Конюшенная,
-              д. 19/8, офис 101</p>
-          </li>
-        </ul>
-      </div>
+        <div class="contacts__wrapper">
+          <div class="contacts__content">
+            <p class="contacts__title">Контакты</p>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <span class="contacts__name">e-mail:</span>
+                <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__name">адрес:</span>
+                <p class="contacts__text">г. Санкт-Петербург,
+                  ул.&nbsp;Большая Конюшенная,
+                  д.&nbsp;19/8, офис 101</p>
+              </li>
+            </ul>
+          </div>
 
-      <div class="contacts__map map">
-        <div class="map__inner container">
-          <img class="map__img" src="img/map-mobile@1x.jpg"
-            alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-          <a class="map__btn btn" href="#">Напишите нам</a>
+          <div class="contacts__map map">
+            <img class="map__img" src="img/map-mobile@1x.jpg"
+              alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </div>
+        </div>
+
+        <div class="contacts__btn-wrapper">
+          <a class="contacts__btn btn" href="#">Напишите нам</a>
         </div>
       </div>
     </section>
@@ -185,7 +190,8 @@
 
       <div class="page-footer__copiright">
         <p class="page-footer__copiright-text">Разработано</p>
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+          Academy</a>
       </div>
     </div>
   </footer>
