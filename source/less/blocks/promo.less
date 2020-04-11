@@ -23,6 +23,17 @@
     background-position: center bottom;
     margin-top: -71px;
     border-top: 1px solid @gray;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/bg-zigzag-fill.svg);
+      background-repeat: no-repeat;
+      height: 14px;
+      bottom: 0;
+      width: 100%;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -61,8 +72,8 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 

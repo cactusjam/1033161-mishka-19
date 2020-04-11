@@ -85,10 +85,13 @@
 }
 
 .reviews__inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-start;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -105,10 +108,23 @@
 }
 
 .reviews__toggles {
+  align-self: center;
+
   @media (min-width: @tablet-width) {
     order: 4;
     position: absolute;
     right: 50px;
     top: 353px;
+  }
+}
+
+.reviews__toggle {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 35px;
   }
 }

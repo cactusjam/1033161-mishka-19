@@ -21,14 +21,19 @@
   color: @black;
   padding-left: 46px;
   text-decoration: none;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  display: block;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
+    padding-left: 84px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &--basket {
     @media (min-width: @tablet-width) {
-      padding-left: 84px;
     }
   }
 }
@@ -40,8 +45,6 @@
 }
 
 .user-navigation__item {
-  padding-top: 30px;
-  padding-bottom: 30px;
   border-top: 1px solid @gray;
   list-style: none;
 
@@ -49,4 +52,10 @@
     border: none;
     align-content: center;
   }
+}
+
+.user-navigation__icon {
+  position: absolute;
+  left: 0;
+  transform: translateY(5px);
 }
