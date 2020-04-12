@@ -1,6 +1,29 @@
 .about-us {
   padding-top: 34px;
-  padding-bottom: 61px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px 7px;
+    background-position-x: -8px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 768px 17px;
+      background-position-x: -20px;
+      height: 17px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
 }
 
 .about-us__text {
@@ -62,8 +85,36 @@
   path {
     fill: @blue;
   }
-}
 
+  &--eko {
+    top: 2px;
+    left: 8px;
+  }
+
+  &--style {
+    top: 3px;
+  }
+
+  &--like {
+    top: 8px;
+    left: 7px;
+  }
+
+  &--handmade {
+    top: 5px;
+    left: 3px;
+  }
+
+  &--support {
+    top: 6px;
+    left: -6px;
+  }
+
+  &--package {
+    top: 4px;
+    left: 3px;
+  }
+}
 
 .about-us__list {
   margin: 0;

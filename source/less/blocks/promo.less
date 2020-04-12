@@ -11,7 +11,7 @@
   background-position: center -15%;
   background-size: 575px 373px;
   padding: 0;
-  padding-top: 71px;
+  padding-top: 72px;
   min-height: 489px;
 
   @media (min-width: @tablet-width) {
@@ -19,20 +19,22 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px 746px;
     min-height: 746px;
-    padding-top: 160px;
+    padding-top: 154px;
     background-position: center bottom;
-    margin-top: -71px;
+    margin-top: -70px;
     border-top: 1px solid @gray;
     position: relative;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
-      background-image: url(../img/bg-zigzag-fill.svg);
-      background-repeat: no-repeat;
-      height: 14px;
-      bottom: 0;
-      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: 768px 24px;
+      height: 24px;
     }
   }
 
@@ -66,29 +68,31 @@
 
 .promo__link {
   text-decoration: none;
-  padding-top: 28px;
+  padding-top: 27px;
   padding-bottom: 28px;
   display: block;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-bottom: 30px;
   }
 }
 
 .promo__link-text {
-  padding-left: 32px;
+  padding-left: 29px;
   width: 106px;
   color: @white;
   font-size: 19px;
   font-weight: 700;
   display: block;
+  transform: translateY(-2px);
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     width: 116px;
+    padding-left: 35px;
   }
 }
 
@@ -103,6 +107,7 @@
   }
 
   &--interior {
+    top: 53%;
     width: 40px;
     height: 62px;
   }
@@ -110,6 +115,7 @@
   &--toy {
     width: 60px;
     height: 60px;
+    right: 28px;
   }
 }
 

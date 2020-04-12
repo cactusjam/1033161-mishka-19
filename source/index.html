@@ -5,33 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "img/mishka-index-mobile-menu.png" );
-    }
-    /* Tablet */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Tablet layout */
-        background-image: url( "img/mishka-index-tablet.png" );
-      }
-    }
-    /* Desktop */
-    @media ( min-width: 1150px ) {
-      HTML {
-        /* Desktop layout */
-        background-image: url( "img/mishka-index-desktop.png" );
-      }
-    }
-  </style>
-  <link type="text/css" rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -60,15 +33,15 @@
         <ul class="header-nav__user-list user-navigation">
           <li class="user-navigation__item">
             <a class="user-navigation__link user-navigation__link--search" href="#">
-              <svg class="user-navigation__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+              <svg class="user-navigation__icon user-navigation__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
                 <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
               </svg>
               <span class="user-navigation__link-text">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--basket" href="#">
-              <svg class="user-navigation__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+            <a class="user-navigation__link" href="#">
+              <svg class="user-navigation__icon user-navigation__icon--basket" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
                 <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
               </svg>
               <span>Корзина: пока пуста</span>
@@ -93,7 +66,7 @@
 
     <section class="promo">
       <div class="promo__inner container">
-        <h2 class="promo__title promo__title--index">Милые штуки ручной работы для дома</h2>
+        <h2 class="promo__title promo__title--index">Милые штуки ручной работы&nbsp;для дома</h2>
         <ul class="promo__list">
           <li class="promo__item promo__item--first-promo">
             <a href="#" class="promo__link"><span class="promo__link-text">Предметы интерьера</span>
@@ -143,17 +116,17 @@
               <p class="weekly-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести
                 расцветках и трех размерах.</p>
               <table class="weekly-product__options">
-                <tr class="weekly-product__cell">
-                  <td class="weekly-product__field">Цвет:</td>
-                  <td class="weekly-product__value">«Тиффани»/серый</td>
+                <tr class="weekly-product__row">
+                  <td class="weekly-product__cell">Цвет:</td>
+                  <td class="weekly-product__cell">«Тиффани»/серый</td>
                 </tr>
-                <tr class="weekly-product__cell">
-                  <td class="weekly-product__field">Диаметр:</td>
-                  <td class="weekly-product__value">25 см</td>
+                <tr class="weekly-product__row">
+                  <td class="weekly-product__cell">Диаметр:</td>
+                  <td class="weekly-product__cell">25 см</td>
                 </tr>
-                <tr class="weekly-product__cell">
-                  <td class="weekly-product__field">Высота:</td>
-                  <td class="weekly-product__value">15 см</td>
+                <tr class="weekly-product__row">
+                  <td class="weekly-product__cell">Высота:</td>
+                  <td class="weekly-product__cell">15 см</td>
                 </tr>
               </table>
             </div>
@@ -270,7 +243,7 @@
     <section class="reviews">
       <div class="reviews__inner container">
         <h3 class="reviews__title">Отзывы</h3>
-        <blockquote class="reviews__content">
+        <div class="reviews__content">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
             лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
             фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -278,7 +251,7 @@
             <span class="reviews__author-name">Анастасия Красильникова</span>
             <a class="reviews__author-site" href="#">@misssssiskras</a>
           </p>
-        </blockquote>
+        </div>
         <p class="reviews__toggles">
           <button class="reviews__toggle" type="button">
             <span class="visually-hidden">Назад</span>
@@ -391,7 +364,9 @@
         <p class="page-footer__copiright-text">Разработано</p>
         <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="visually-hidden">HTML Academy</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34"><path fill="#63d1bb" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path fill="#63d1bb" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
       </div>
     </div>
