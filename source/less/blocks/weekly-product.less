@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 53px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 74px;
+  }
 }
 
 .weekly-product__inner.container {
@@ -14,7 +18,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 135px;
+    padding-top: 124px;
   }
 }
 
@@ -25,20 +29,20 @@
   color: @blue;
   margin: 0;
   margin-top: 3px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 70px;
     line-height: 17px;
     align-self: center;
+    text-align: center;
+    margin-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 47px;
+    margin-top: 4px;
   }
-}
-
-.promo__list {
-  color: @color-promo-list;
 }
 
 .weekly-product__options {
@@ -90,13 +94,14 @@
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
-    margin-right: 150px;
+    margin-right: 146px;
+    margin-left: -3px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    margin-left: 58px;
+    margin-left: 53px;
     margin-right: auto;
   }
 }
@@ -128,8 +133,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    margin-bottom: 29px;
+    margin-bottom: 33px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
   }
 }
 
@@ -145,7 +154,6 @@
 
   @media (min-width: @desktop-width) {
     align-content: stretch;
-    min-height: 496px;
   }
 }
 
@@ -157,10 +165,14 @@
 }
 
 .weekly-product__order {
-  margin-top: 23px;
+  margin-top: 25px;
 
   @media (min-width: @tablet-width) {
     width: 290px;
+    margin-top: -110px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-top: -110px;
   }
 }
@@ -174,7 +186,7 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 175px;
-    margin-top: 25px;
+    margin-top: 47px;
   }
 }
 
@@ -199,10 +211,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -140px;
+    margin-top: -156px;
   }
 }
 
 .weekly-product__cell {
-  padding: 11px 28px 7px 0;
+  padding: 9px 28px 7px 0;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 7px;
+  }
 }

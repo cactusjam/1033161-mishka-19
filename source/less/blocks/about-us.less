@@ -12,17 +12,29 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: 320px 7px;
     background-position-x: -8px;
+    background-repeat: repeat-x;
 
     @media (min-width: @tablet-width) {
       background-size: 768px 17px;
       background-position-x: -20px;
       height: 17px;
     }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+      background-size: 1050px 21px;
+      background-position-x: -40px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding-top: 65px;
     padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 81px;
+    padding-bottom: 30px;
   }
 }
 
@@ -149,11 +161,12 @@
     font-size: 43px;
     line-height: 50px;
     margin-bottom: 47px;
+    margin-left: -3px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 44px;
+    margin-bottom: 47px;
   }
 }
