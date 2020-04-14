@@ -127,27 +127,30 @@
   width: 100%;
 }
 
-.production__icon {
-  fill: @blue;
-  position: absolute;
-  top: 29px;
-
-  @media (min-width: @tablet-width) {
-    top: 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 41px;
-  }
-}
-
 .production__header {
-  display: flex;
   order: 1;
   padding-top: 24px;
   padding-left: 33px;
   padding-bottom: 25px;
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 27px;
+    top: 29px;
+
+    @media (min-width: @tablet-width) {
+      top: 33px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 40px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     order: 2;

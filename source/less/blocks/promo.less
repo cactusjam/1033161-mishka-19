@@ -1,5 +1,5 @@
 .promo {
-  background-color: @base-white;
+  background-color: @light-grey;
 }
 
 .promo__inner.container {
@@ -84,6 +84,41 @@
   display: block;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &--interior {
+    &::before {
+      background-image: url("../img/icon-interior.svg");
+      width: 40px;
+      height: 62px;
+      right: 36px;
+      top: 22px;
+
+      @media (min-width: @tablet-width) {
+        right: 36px;
+        top: 28px;
+      }
+    }
+  }
+
+  &--toy {
+    &::before {
+      background-image: url("../img/icon-toy.svg");
+      width: 60px;
+      height: 60px;
+      right: 26px;
+      top: 21px;
+
+      @media (min-width: @tablet-width) {
+        right: 36px;
+        top: 31px;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 28px;
     padding-bottom: 30px;
@@ -104,37 +139,6 @@
     line-height: 30px;
     width: 116px;
     padding-left: 35px;
-  }
-}
-
-.promo__icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 35px;
-
-  path {
-    fill: @icon-color;
-  }
-
-  &--interior {
-    top: 53%;
-    width: 40px;
-    height: 62px;
-
-    @media (min-width: @tablet-width) {
-      top: 52%;
-    }
-  }
-
-  &--toy {
-    width: 60px;
-    height: 60px;
-    right: 28px;
-
-    @media (min-width: @tablet-width) {
-      right: 35px;
-    }
   }
 }
 
