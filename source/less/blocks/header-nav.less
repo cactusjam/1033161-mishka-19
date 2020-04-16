@@ -1,19 +1,9 @@
-.page-header__inner {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-  }
-}
-
 .header-nav {
   position: relative;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    z-index: 1;
   }
 }
 
@@ -27,7 +17,6 @@
 
 .header-nav__logo-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   position: relative;
   padding: 22px 30px 23px;
@@ -36,6 +25,8 @@
     justify-content: flex-start;
     padding-left: 0;
     padding-bottom: 20px;
+    flex-grow: 1;
+    background-color: #ffffff;
   }
 
   @media (min-width: @desktop-width) {
@@ -92,8 +83,10 @@
   @media (min-width: @tablet-width) {
     display: block;
     order: 4;
-    margin-left: auto;
+    text-align: right;
     padding-top: 18px;
+    width: 49%;
+    z-index: 1;
   }
 }
 

@@ -2,15 +2,33 @@
   margin: 0;
   padding-left: 0;
   margin-left: auto;
+  position: relative;
+
+  // &::after {
+  //   content: none;
+
+  //   @media (min-width: @desktop-width) {
+  //     content: "";
+  //     left: 450px;
+  //     position: absolute;
+  //     top: 0;
+  //     width: calc(50vw - 500px);
+  //     height: 100%;
+  //     background-color: #fff;
+  //   }
+  // }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    width: 350px;
+    background-color: #ffffff;
   }
 
   @media (min-width: @desktop-width) {
     order: 2;
+    width: 450px;
   }
 }
 

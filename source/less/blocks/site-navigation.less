@@ -3,16 +3,32 @@
   padding-left: 0;
   position: relative;
 
+  // &::before {
+  //   content: none;
+
+  //   @media (min-width: @desktop-width) {
+  //     right: 450px;
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     width: calc(50vw - 500px);
+  //     height: 100%;
+  //     background-color: #ffffff;
+  //   }
+  // }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     order: 1;
-    width: 350px;
+    width: 51%;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     order: 0;
     width: 450px;
+    background-color: #ffffff;
   }
 }
 
@@ -25,6 +41,16 @@
   padding-top: 26px;
   padding-bottom: 27px;
   display: block;
+
+  &:nth-child(odd) {
+    @media (min-width: @tablet-width) {
+      margin-right: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 0;

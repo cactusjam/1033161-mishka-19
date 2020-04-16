@@ -1,7 +1,14 @@
-.catalog__inner {
+.catalog__inner.container {
+  padding-top: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 79px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 129px;
   }
 }
