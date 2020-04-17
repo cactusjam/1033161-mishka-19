@@ -48,7 +48,15 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 19px;
+    top: 67px;
+
+    &--type {
+      top: 19px;
+    }
+
+    &--mail {
+      top: 144px;
+    }
   }
 }
 
@@ -155,24 +163,13 @@
   list-style: none;
   margin: 0;
   padding-left: 64px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-left: 80px;
     padding-top: 17px;
     padding-bottom: 17px;
     margin-bottom: 24px;
-  }
-
-
-  &--field {
-    min-height: 51px;
-    border: none;
-    border-bottom: 2px solid @black;
-
-    @media (min-width: @tablet-width) {
-      width: 100%;
-      margin-left: 25px;
-    }
   }
 
   &--color {
@@ -419,6 +416,46 @@
       flex-direction: row;
       width: 700px;
       margin-left: 111px;
+    }
+  }
+}
+
+.order-form__input {
+  &--field,
+  &--number {
+    min-height: 51px;
+    border: none;
+    border-bottom: 2px solid @black;
+
+    @media (min-width: @tablet-width) {
+      width: 483px;
+      margin-left: 25px;
+    }
+  }
+
+  &--number {
+    @media (min-width: @tablet-width) {
+      background-color: @wind_chill;
+    }
+  }
+}
+
+.order-form__input-img {
+  position: absolute;
+  right: 9px;
+  top: 22%;
+
+  fill-opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    right: 26px;
+  }
+
+  &--mail {
+    right: 4px;
+
+    @media (min-width: @tablet-width) {
+      right: 21px;
     }
   }
 }
