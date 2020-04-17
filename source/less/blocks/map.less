@@ -10,3 +10,22 @@
     width: 525px;
   }
 }
+
+.map {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(10px, -34px);
+  }
+}

@@ -8,7 +8,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 62px;
+    padding-top: 122px;
+  }
+}
+
+.order-form__inner.container {
+  @media (min-width: @desktop-width) {
+    padding: 0 113px;
   }
 }
 
@@ -34,8 +40,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 111px;
-    width: 672px;
+    margin: 0 auto;
+    width: 700px;
   }
 }
 
@@ -57,6 +63,11 @@
     &--mail {
       top: 144px;
     }
+
+    &--more {
+      left: 0;
+      top: 67px;
+    }
   }
 }
 
@@ -74,6 +85,12 @@
   font-weight: 700;
   position: relative;
   display: block;
+
+  &--field {
+    @media (min-width: @tablet-width) {
+      padding-right: 25px;
+    }
+  }
 
   &--radio {
     &::before {
@@ -176,13 +193,17 @@
     margin-bottom: 19px;
 
     @media (min-width: @tablet-width) {
-      min-width: 240px;
+      width: 240px;
       box-sizing: border-box;
       padding: 0;
       padding-bottom: 17px;
       padding-top: 17px;
       padding-left: 80px;
       margin-bottom: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 203px;
     }
   }
 
@@ -228,12 +249,12 @@
 
     @media (min-width: @tablet-width) {
       width: 481px;
-      margin-left: 167px;
       min-height: 132px;
+      margin: 0;
     }
 
     @media (min-width: @desktop-width) {
-      width: 696px;
+      width: 680px;
     }
   }
 
@@ -316,13 +337,14 @@
   margin-top: 18px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 167px;
+    padding-left: 167px;
     flex-grow: 1;
     margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 111px;
+    padding-left: 113px;
+    margin: 0;
   }
 
   &--color {
@@ -331,18 +353,32 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      padding-right: 82px;
+    }
   }
 
   &--tel {
     margin-top: 0;
 
     @media (min-width: @tablet-width) {
-      margin-left: 142px;
+      padding-left: 165px;
+      margin-left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 112px;
     }
   }
 
   &--name {
     margin-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
 }
 
@@ -365,6 +401,10 @@
     @media (min-width: @tablet-width) {
       padding-bottom: 27px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 56px;
+    }
   }
 
   &--color {
@@ -380,8 +420,12 @@
     padding-top: 10px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 25px;
+      padding-top: 49px;
       padding-bottom: 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 48px;
     }
   }
 
@@ -396,9 +440,15 @@
 
   &--more {
     padding-top: 10px;
+    padding-left: 0;
 
     @media (min-width: @tablet-width) {
-      padding-top: 32px;
+      padding-top: 50px;
+      padding-left: 167px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 112px;
     }
   }
 
@@ -409,13 +459,14 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-top: 23px;
+      padding-top: 48px;
     }
 
     @media (min-width: @desktop-width) {
       flex-direction: row;
       width: 700px;
-      margin-left: 111px;
+      margin: 0 auto;
+      padding-top: 44px;
     }
   }
 }
@@ -429,7 +480,10 @@
 
     @media (min-width: @tablet-width) {
       width: 483px;
-      margin-left: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 626px;
     }
   }
 
@@ -437,18 +491,28 @@
     @media (min-width: @tablet-width) {
       background-color: @wind_chill;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 682px;
+    }
   }
 }
 
 .order-form__input-img {
   position: absolute;
-  right: 9px;
-  top: 22%;
-
   fill-opacity: 0.2;
 
-  @media (min-width: @tablet-width) {
-    right: 26px;
+  &--tel {
+    right: 9px;
+    top: 22%;
+
+    @media (min-width: @tablet-width) {
+      right: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 7px;
+    }
   }
 
   &--mail {
@@ -456,6 +520,10 @@
 
     @media (min-width: @tablet-width) {
       right: 21px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 5px;
     }
   }
 }
