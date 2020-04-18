@@ -4,22 +4,17 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 }
 
-.header-nav:last-child {
-  border-bottom: 1px solid @gray;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
 
 .header-nav__logo-wrapper {
   display: flex;
   justify-content: center;
   position: relative;
   padding: 22px 30px 23px;
+  border-bottom: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
@@ -27,6 +22,7 @@
     padding-bottom: 20px;
     flex-grow: 1;
     background-color: #ffffff;
+    border: unset;
   }
 
   @media (min-width: @desktop-width) {
@@ -87,6 +83,9 @@
     padding-top: 18px;
     width: 49%;
     z-index: 1;
+    position: absolute;
+    top: 100%;
+    right: 0;
   }
 }
 

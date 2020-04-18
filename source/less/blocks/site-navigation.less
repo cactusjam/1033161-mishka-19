@@ -3,19 +3,6 @@
   padding-left: 0;
   position: relative;
 
-  // &::before {
-  //   content: none;
-
-  //   @media (min-width: @desktop-width) {
-  //     right: 450px;
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     width: calc(50vw - 500px);
-  //     height: 100%;
-  //     background-color: #ffffff;
-  //   }
-  // }
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -23,12 +10,15 @@
     order: 1;
     width: 51%;
     z-index: 1;
+    position: absolute;
+    top: 100%;
   }
 
   @media (min-width: @desktop-width) {
     order: 0;
     width: 450px;
     background-color: #ffffff;
+    position: unset;
   }
 }
 
@@ -76,8 +66,11 @@
   }
 
   &--catalog {
+    border: unset;
+
     @media (min-width: @desktop-width) {
       padding-right: 35px;
+      border-right: 1px solid @gray;
     }
   }
 

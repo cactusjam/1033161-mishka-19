@@ -12,11 +12,82 @@
   }
 }
 
-.order-form__inner.container {
-  @media (min-width: @desktop-width) {
-    padding: 0 113px;
+.order-form__inner {
+  position: relative;
+
+  &.container {
+    @media (min-width: @desktop-width) {
+      padding: 0 113px;
+    }
+  }
+
+  &--color.container {
+    padding-top: 29px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 48px;
+      padding-bottom: 27px;
+    }
+  }
+
+  &--type.container {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 27px;
+    }
+  }
+
+  &--name.container {
+    padding-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 49px;
+      padding-bottom: 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 48px;
+    }
+  }
+
+  &--number.container {
+    padding-top: 8px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 49px;
+      padding-bottom: 26px;
+    }
+  }
+
+  &--more.container {
+    padding-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 50px;
+      padding-left: 217px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 225px;
+    }
+  }
+
+  &--order.container {
+    padding-top: 9px;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      padding: 44px 225px 0;
+    }
   }
 }
+
 
 .content-color {
   padding-top: 30px;
@@ -57,7 +128,7 @@
     top: 67px;
 
     &--type {
-      top: 19px;
+      top: 135px;
     }
 
     &--mail {
@@ -65,8 +136,12 @@
     }
 
     &--more {
-      left: 0;
       top: 67px;
+      left: 52px;
+
+      @media (min-width: @desktop-width) {
+        left: 113px;
+      }
     }
   }
 }
@@ -204,6 +279,7 @@
 
     @media (min-width: @desktop-width) {
       width: 203px;
+      margin-right: 59px;
     }
   }
 
@@ -347,6 +423,12 @@
     margin: 0;
   }
 
+  &--type {
+    @media (min-width: @desktop-width) {
+      margin-top: 56px;
+    }
+  }
+
   &--color {
     @media (min-width: @tablet-width) {
       display: flex;
@@ -356,7 +438,7 @@
 
     @media (min-width: @desktop-width) {
       margin: 0;
-      padding-right: 82px;
+      justify-content: unset;
     }
   }
 
@@ -391,84 +473,6 @@
 .order-form__check:checked + &::after,
 .order-form__radio:checked + &::after {
   display: block;
-}
-
-
-.order-form__content {
-  position: relative;
-
-  &--type {
-    @media (min-width: @tablet-width) {
-      padding-bottom: 27px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-top: 56px;
-    }
-  }
-
-  &--color {
-    padding-top: 29px;
-
-    @media (min-width: @tablet-width) {
-      padding-top: 48px;
-      padding-bottom: 27px;
-    }
-  }
-
-  &--name {
-    padding-top: 10px;
-
-    @media (min-width: @tablet-width) {
-      padding-top: 49px;
-      padding-bottom: 29px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-top: 48px;
-    }
-  }
-
-  &--number {
-    padding-top: 8px;
-
-    @media (min-width: @tablet-width) {
-      padding-top: 49px;
-      padding-bottom: 26px;
-    }
-  }
-
-  &--more {
-    padding-top: 10px;
-    padding-left: 0;
-
-    @media (min-width: @tablet-width) {
-      padding-top: 50px;
-      padding-left: 167px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 112px;
-    }
-  }
-
-  &--order {
-    padding-top: 9px;
-
-    @media (min-width: @tablet-width) {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 48px;
-    }
-
-    @media (min-width: @desktop-width) {
-      flex-direction: row;
-      width: 700px;
-      margin: 0 auto;
-      padding-top: 44px;
-    }
-  }
 }
 
 .order-form__input {
