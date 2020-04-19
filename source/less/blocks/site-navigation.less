@@ -3,16 +3,22 @@
   padding-left: 0;
   position: relative;
 
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     order: 1;
-    width: 350px;
+    width: 51%;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
   }
 
   @media (min-width: @desktop-width) {
     order: 0;
     width: 450px;
+    background-color: #ffffff;
+    position: unset;
   }
 }
 
@@ -25,6 +31,16 @@
   padding-top: 26px;
   padding-bottom: 27px;
   display: block;
+
+  &:nth-child(odd) {
+    @media (min-width: @tablet-width) {
+      margin-right: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
@@ -50,8 +66,11 @@
   }
 
   &--catalog {
+    border: unset;
+
     @media (min-width: @desktop-width) {
       padding-right: 35px;
+      border-right: 1px solid @gray;
     }
   }
 

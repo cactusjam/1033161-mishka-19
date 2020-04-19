@@ -9,19 +9,22 @@
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
-      background-image: url( "js/pixel-glass/preview/mishka-catalog-mobile.png" );
+      background-position: 50% 0;
+      background-image: url("js/pixel-glass/preview/mishka-catalog-mobile.png");
     }
-    @media ( min-width: 768px ) {
+
+    @media (min-width: 768px) {
       HTML {
-        background-image: url( "js/pixel-glass/preview/mishka-catalog-tablet.png" );
+        background-image: url("js/pixel-glass/preview/mishka-catalog-tablet.png");
       }
     }
-    @media ( min-width: 1150px ) {
+
+    @media (min-width: 1150px) {
       HTML {
-        background-image: url( "js/pixel-glass/preview/mishka-catalog-desktop.png" );
+        background-image: url("js/pixel-glass/preview/mishka-catalog-desktop.png");
       }
     }
+
   </style>
   <link href="js/pixel-glass/styles.css" rel="stylesheet">
   <script src="js/pixel-glass/script.js"></script>
@@ -33,7 +36,7 @@
     <div class="page-header__inner container">
       <nav class="page-header__nav header-nav header-nav--opened">
         <div class="header-nav__logo-wrapper">
-          <a class="header-nav__logo" href="index.html">
+          <a href="index.html" class="header-nav__logo">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -45,7 +48,7 @@
         </div>
         <ul class="header-nav__site-list site-navigation">
           <li class="site-navigation__item site-navigation__item--catalog">
-            <a class="site-navigation__link" href="catalog.html">Каталог товаров</a>
+            <a class="site-navigation__link">Каталог товаров</a>
           </li>
           <li class="site-navigation__item site-navigation__item--order">
             <a class="site-navigation__link" href="form.html">Вязание на заказ</a>

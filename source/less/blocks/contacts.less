@@ -44,7 +44,7 @@
   @media (min-width: @desktop-width) {
     padding-left: 175px;
     padding-top: 93px;
-    padding-bottom: 104px;
+    padding-bottom: 106px;
   }
 }
 
@@ -63,6 +63,25 @@
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  &::after {
+    content: none;
+    position: absolute;
+    background-image: url("../img/icon-flag.svg");
+    width: 47px;
+    height: 81px;
+
+    @media (min-width: @tablet-width) {
+      content: "";
+      right: 0;
+      top: -15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -107px;
+      top: -8px;
+    }
   }
 }
 
@@ -152,6 +171,12 @@
   @media (min-width: @tablet-width) {
     font-size: 17px;
     margin-top: 56px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -168,7 +193,7 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding-left: 50px;
-    margin-top: -107px;
+    margin-top: -52px;
   }
 }
 
@@ -179,6 +204,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
