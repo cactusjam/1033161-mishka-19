@@ -119,3 +119,25 @@
     height: 72px;
   }
 }
+
+@media (max-width: @mobile-max-width) {
+  .header-nav--closed .site-navigation__item {
+    display: none;
+  }
+
+  .header-nav--closed .user-navigation__item {
+    display: none;
+  }
+
+  .header-nav--nojs .header-nav__toggle {
+    display: none;
+  }
+
+  .header-nav--nojs .site-navigation__item {
+    display: block;
+  }
+
+  .header-nav--nojs .user-navigation__item {
+    display: block;
+  }
+}

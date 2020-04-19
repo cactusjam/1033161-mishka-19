@@ -38,14 +38,13 @@
 <body class="page">
   <header class="page-header">
     <div class="page-header__inner container">
-      <nav class="page-header__nav header-nav header-nav--opened">
+      <nav class="page-header__nav header-nav header-nav--closed header-nav--nojs">
         <div class="header-nav__logo-wrapper">
           <a class="header-nav__logo">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="header-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35"
-                alt="Интернет магазин вязаных товаров Мишка">
+              <img class="header-nav__logo-img" src="img/logo-mobile.svg" alt="Интернет магазин вязаных товаров Мишка">
             </picture>
           </a>
           <button class="header-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -148,17 +147,19 @@
 
             <div class="weekly-product__image-wrapper">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-                <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
-                  alt="Вязанные корзинки">
+                <source media="(min-width: 1150px)"
+                  srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg"
+                  srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
               </picture>
             </div>
           </div>
 
           <div class="weekly-product__order">
             <p class="weekly-product__price">Цена: 990 руб.</p>
-            <a href="#" class="weekly-product__btn btn">Заказать</a>
+            <a href="#" class="weekly-product__btn btn btn--add">Заказать</a>
           </div>
         </div>
       </div>
@@ -247,9 +248,9 @@
 
           <div class="contacts__map map">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
-              <img class="map__img" src="img/map-mobile@1x.jpg"
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="map__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
                 alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
             </picture>
           </div>
@@ -289,7 +290,7 @@
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+          <a class="social__link social__link--instagram" href="#" aria-label="instagram">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.769px" height="21.334px"
               viewBox="53.115 53.19 21.769 21.334" enable-background="new 53.115 53.19 21.769 21.334"
@@ -305,7 +306,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="">
+          <a class="social__link social__link--facebook" href="#" aria-label="facebook">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.962px" height="27.718px"
               viewBox="56.519 49.996 14.962 27.718" enable-background="new 56.519 49.996 14.962 27.718"
@@ -321,7 +322,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="">
+          <a class="social__link social__link--twitter" href="#" aria-label="vkontakte">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.494px" height="20.168px"
               viewBox="52.253 53.771 23.494 20.168" enable-background="new 52.253 53.771 23.494 20.168"
@@ -340,7 +341,8 @@
 
       <div class="page-footer__copiright">
         <p class="page-footer__copiright-text">Разработано</p>
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="HTML Academy">
           <span class="visually-hidden">HTML Academy</span>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
@@ -353,6 +355,23 @@
     </div>
   </footer>
 
+  <div class="card-product__modal-wrapper">
+    <form class="card-product__form" action="https://echo.htmlacademy.ru" method="get">
+      <h3 class="card-product__form-title">Добавить в корзину</h3>
+      <p class="card-product__form-text">Выберите размер:</p>
+      <div class="card-product__choose-size">
+        <input class="card-product__choose-input" type="radio" id="size-s" name="size" checked>
+        <label class="card-product__choose-label" for="size-s">S</label>
+        <input class="card-product__choose-input" type="radio" id="size-m" name="size">
+        <label class="card-product__choose-label" for="size-m">M</label>
+        <input class="card-product__choose-input" type="radio" id="size-l" name="size">
+        <label class="card-product__choose-label" for="size-l">L</label>
+      </div>
+      <button class="card-product_btn btn--modal">Добавить</button>
+    </form>
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>
