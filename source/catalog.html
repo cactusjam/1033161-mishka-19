@@ -310,20 +310,22 @@
     </div>
   </footer>
 
-  <div class="card-product__modal-wrapper">
-    <form class="card-product__form" action="https://echo.htmlacademy.ru" method="get">
-      <h3 class="card-product__form-title">Добавить в корзину</h3>
-      <p class="card-product__form-text">Выберите размер:</p>
-      <div class="card-product__choose-size">
-        <input class="card-product__choose-input" type="radio" id="size-s" name="size" checked>
-        <label class="card-product__choose-label" for="size-s">S</label>
-        <input class="card-product__choose-input" type="radio" id="size-m" name="size">
-        <label class="card-product__choose-label" for="size-m">M</label>
-        <input class="card-product__choose-input" type="radio" id="size-l" name="size">
-        <label class="card-product__choose-label" for="size-l">L</label>
-      </div>
-      <button class="card-product_btn btn--modal">Добавить</button>
-    </form>
+  <div class="modal-overlay">
+    <div class="modal-overlay--inner container">
+      <form class="modal-overlay__form" action="https://echo.htmlacademy.ru" method="get">
+        <h3 class="modal-overlay__form-title">Добавить в корзину</h3>
+        <p class="modal-overlay__form-text">Выберите размер:</p>
+        <div class="modal-overlay_choose-size">
+          <input class="visually-hidden modal-overlay__choose-input" type="radio" id="size-s" name="size" checked>
+          <label class="modal-overlay__choose-label" for="size-s">S</label>
+          <input class="visually-hidden modal-overlay__choose-input" type="radio" id="size-m" name="size">
+          <label class="hidden modal-overlay__choose-label" for="size-m">M</label>
+          <input class="visually-hidden modal-overlay__choose-input" type="radio" id="size-l" name="size">
+          <label class="modal-overlay__choose-label" for="size-l">L</label>
+        </div>
+        <button class="modal-overlay_btn btn">Добавить</button>
+      </form>
+    </div>
   </div>
   <script src="js/index.js"></script>
 </body>

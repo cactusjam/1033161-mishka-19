@@ -1,7 +1,6 @@
-  var navMain = document.querySelector('.header-nav');
-  var navToggle = document.querySelector('.header-nav__toggle');
-  var link = document.querySelector(".btn--add");
-  var modal = document.querySelector(".card-product__form");
+let navMain = document.querySelector('.header-nav');
+let navToggle = document.querySelector('.header-nav__toggle');
+let modal = document.querySelector('.modal-overlay');
 
   navMain.classList.remove('header-nav--nojs');
 
@@ -17,17 +16,18 @@
 
 
   // ------заказать-----------
-
-  link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.add("card-product__modal-wrapper--open");
-  });
+  document.querySelectorAll('.btn--add').forEach(item => {
+    item.addEventListener('click', event => {
+      event.preventDefault();
+      modal.classList.add('modal-overlay--open');
+    })
+  })
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (modal.classList.contains("card-product__modal-wrapper--open")) {
-        modal.classList.remove("card-product__modal-wrapper--open");
+      if (modal.classList.contains("modal-overlay--open")) {
+        modal.classList.remove("modal-overlay--open");
       }
     }
   });
