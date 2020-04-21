@@ -38,6 +38,20 @@
       padding-bottom: 56px;
     }
   }
+
+  &:hover,
+  &:focus {
+    color: @color-menu-hover;
+
+    .user-navigation__icon {
+      color: @blue;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .user-navigation__link-text {
