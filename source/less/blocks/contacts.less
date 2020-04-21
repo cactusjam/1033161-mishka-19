@@ -113,9 +113,11 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 52px;
+    display: unset;
 
-    &:last-child {
+    &--address {
       margin-right: 0;
+      display: flex;
     }
   }
 
@@ -129,6 +131,15 @@
   text-decoration: none;
   color: @greyish-brown;
   border-bottom: 1px solid @border-email;
+
+  &:hover,
+  &:focus {
+    color: @mail-link-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 17px;

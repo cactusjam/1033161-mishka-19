@@ -2,7 +2,7 @@
   margin-top: 27px;
   margin-bottom: 30px;
   border: 1px solid @gray;
-  width: 258px;
+  width: 260px;
   display: flex;
   flex-wrap: wrap;
 
@@ -118,6 +118,11 @@
       padding-top: 26px;
     }
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.35);
+  }
 }
 
 .card-product__price-wrapper {
@@ -151,5 +156,19 @@
   @media (min-width: @desktop-width) {
     max-height: 462px;
     width: unset;
+  }
+}
+
+.card-product__btn-img {
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    color: @blue;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
