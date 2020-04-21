@@ -32,6 +32,15 @@
   padding-bottom: 27px;
   display: block;
 
+  &[href]:hover,
+  &[href]:focus {
+    color: @color-menu-hover;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   &:nth-child(odd) {
     @media (min-width: @tablet-width) {
       margin-right: 36px;

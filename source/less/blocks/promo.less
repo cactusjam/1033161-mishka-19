@@ -101,6 +101,8 @@
   }
 
   &--interior {
+    background-color: @bg-color-1promo;
+
     &::before {
       background-image: url("../img/icon-interior.svg");
       width: 40px;
@@ -116,6 +118,8 @@
   }
 
   &--toy {
+    background-color: @bg-color-2promo;
+
     &::before {
       background-image: url("../img/icon-toy.svg");
       width: 60px;
@@ -133,6 +137,11 @@
   @media (min-width: @tablet-width) {
     padding-top: 28px;
     padding-bottom: 30px;
+
+    &:hover {
+      margin-top: -5px;
+      padding-bottom: 35px;
+    }
   }
 }
 
@@ -161,16 +170,12 @@
   list-style: none;
 
   &--first-promo {
-    background-color: @bg-color-1promo;
-
     @media (min-width: @tablet-width) {
       flex-grow: 1;
     }
   }
 
   &--second-promo {
-    background-color: @bg-color-2promo;
-
     @media (min-width: @tablet-width) {
       flex-grow: 1;
     }
