@@ -159,11 +159,15 @@
 
   @media (min-width: @tablet-width) {
     order: 4;
+    width: 175px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    bottom: 102px;
+    bottom: 96px;
   }
 }
 
@@ -176,6 +180,9 @@
   height: 52px;
   border: 1px solid @gray;
 
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 
   &:hover,
   &:focus {
