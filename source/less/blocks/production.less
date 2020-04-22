@@ -27,6 +27,7 @@
 
 .production__video-button {
   background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
   width: 101px;
   height: 77px;
   border: 0;
@@ -35,6 +36,16 @@
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+
+  &:hover,
+  &:focus {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.7;
+  }
 }
 
 .production__description {
@@ -120,6 +131,15 @@
     flex-wrap: wrap;
     height: 455px;
     padding-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
