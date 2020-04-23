@@ -94,11 +94,28 @@
   padding-bottom: 28px;
   display: block;
   position: relative;
+  color: @white;
 
   &::before {
     content: "";
     position: absolute;
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
 
   &--interior {
     background-color: @bg-color-1promo;
@@ -109,6 +126,7 @@
       height: 62px;
       right: 36px;
       top: 22px;
+      opacity: 0.5;
 
       @media (min-width: @tablet-width) {
         right: 36px;
@@ -126,6 +144,7 @@
       height: 60px;
       right: 26px;
       top: 21px;
+      opacity: 0.5;
 
       @media (min-width: @tablet-width) {
         right: 36px;
@@ -138,7 +157,8 @@
     padding-top: 28px;
     padding-bottom: 30px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       margin-top: -5px;
       padding-bottom: 35px;
     }
@@ -148,7 +168,6 @@
 .promo__link-text {
   padding-left: 29px;
   width: 106px;
-  color: @white;
   font-size: 19px;
   font-weight: 700;
   display: block;

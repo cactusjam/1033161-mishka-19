@@ -160,6 +160,7 @@
   font-weight: 700;
   position: relative;
   display: block;
+  cursor: pointer;
 
   &--field {
     @media (min-width: @tablet-width) {
@@ -247,6 +248,16 @@
   @media (min-width: @tablet-width) {
     font-size: 19px;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: @blue;
+  }
+
+  &:active::before {
+    color: @greyish-brown;
+    opacity: 0.3;
+  }
 }
 
 .order-form__item {
@@ -297,6 +308,7 @@
 
     @media (min-width: @desktop-width) {
       width: 700px;
+      margin-bottom: 20px;
     }
   }
 
@@ -322,6 +334,15 @@
     border: 2px solid @greyish-brown;
     padding: 0;
     margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 16px;
+    font-size: 19px;
+
+    &:hover,
+    &:focus {
+      border-color: @blue;
+      outline: none;
+    }
 
     @media (min-width: @tablet-width) {
       width: 481px;
@@ -331,21 +352,17 @@
 
     @media (min-width: @desktop-width) {
       width: 680px;
+      min-height: 129px;
     }
-  }
 
-  &--textarea[placeholder] {
-    font-size: 17px;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.3);
-    padding-top: 14px;
-    padding-left: 16px;
-    font-family: "Open Sans", "Arial", sans-serif;
+    &::placeholder {
+      font-size: 17px;
+      color: rgba(68, 68, 68, 0.3);
+      font-family: "Open Sans", "Arial", sans-serif;
 
-    @media (min-width: @tablet-width) {
-      font-size: 19px;
-      line-height: 30px;
-      padding-top: 6px;
+      @media (min-width: @tablet-width) {
+        font-size: 19px;
+      }
     }
   }
 }
@@ -382,22 +399,6 @@
     margin: 0;
   }
 }
-
-
-.order-form__input[placeholder] {
-  color: rgba(68, 68, 68, 0.3);
-  font-size: 17px;
-  line-height: 18px;
-  padding: 0;
-
-  @media (min-width: @tablet-width) {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 19px;
-    line-height: 18px;
-    padding-left: 18px;
-  }
-}
-
 
 .order-form__more {
   min-height: 142px;
@@ -476,6 +477,10 @@
 }
 
 .order-form__input {
+
+  font-size: 19px;
+  padding-left: 18px;
+
   &--field,
   &--number {
     min-height: 51px;
@@ -498,6 +503,31 @@
 
     @media (min-width: @desktop-width) {
       width: 682px;
+    }
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+    font-size: 17px;
+    line-height: 18px;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-size: 19px;
+      line-height: 18px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+    outline: none;
+
+    + .order-form__input-img {
+      fill: @blue;
+      fill-opacity: 1;
+      color: @blue;
     }
   }
 }
