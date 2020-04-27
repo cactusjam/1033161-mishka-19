@@ -1,6 +1,7 @@
 let navMain = document.querySelector('.header-nav');
 let navToggle = document.querySelector('.header-nav__toggle');
 let modal = document.querySelector('.modal-overlay');
+let btnAdd = document.getElementsByClassName('btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
@@ -16,12 +17,13 @@ navToggle.addEventListener('click', function () {
 
 
 // ------заказать-----------
-document.querySelectorAll('.btn--add').forEach(item => {
-  item.addEventListener('click', event => {
+
+for(var i = 0; i < btnAdd.length; i++) {
+  btnAdd[i].addEventListener("click", function(){
     event.preventDefault();
     modal.classList.add('modal-overlay--open');
   })
-})
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -33,9 +35,10 @@ window.addEventListener("keydown", function (evt) {
 });
 
 
+
 // ------ карта --------
-let Ip = document.querySelector('.map__ip');
-Ip.classList.remove('map__ip--nojs');
+var mapIp = document.querySelector('.map__ip');
+mapIp.classList.remove('map__ip--nojs');
 
 if (document.querySelector('.map')) {
   var imgMap = document.querySelector('.map__wrapper');
@@ -49,18 +52,15 @@ if (document.querySelector('.map')) {
 
       map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 17,
-        center: {
-          lat: 59.9385794,
-          lng: 30.3230152
-        }
+        center: coordinates
       });
 
-    marker = new google.maps.Marker({
-      position: coordinates,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      icon: markerImg
-    });
+      marker = new google.maps.Marker({
+        position: coordinates,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: markerImg
+      });
   }
 
   function hideImgMap() {
