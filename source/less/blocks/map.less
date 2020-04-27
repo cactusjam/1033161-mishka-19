@@ -1,6 +1,7 @@
-.map__img {
+.map__wrapper {
   width: 322px;
   height: 457px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -9,10 +10,10 @@
   @media (min-width: @desktop-width) {
     width: 525px;
   }
-}
 
-.map {
-  position: relative;
+  &--hidden {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -27,5 +28,18 @@
     bottom: 0;
     right: 0;
     transform: translate(10px, -34px);
+  }
+}
+
+.map__ip {
+  width: 100%;
+  height: 457px;
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+  }
+
+  &--nojs {
+    display: none;
   }
 }
