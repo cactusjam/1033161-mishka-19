@@ -1,11 +1,9 @@
 .card-product {
   margin-top: 27px;
   margin-bottom: 29px;
-  border: 1px solid @gray;
   width: 260px;
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 668px;
@@ -95,6 +93,7 @@
 .card-product__image {
   width: 260px;
   height: 195px;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 334px;
@@ -108,13 +107,16 @@
 }
 
 .card-product__description-wrapper {
+  box-sizing: border-box;
+  border: 1px solid @gray;
+  width: 260px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     padding-left: 27px;
     padding-top: 26px;
     width: 50%;
-    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
@@ -125,11 +127,11 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -164,7 +166,7 @@
 
   @media (min-width: @desktop-width) {
     max-height: 462px;
-    width: unset;
+    width: 260px;
   }
 }
 
