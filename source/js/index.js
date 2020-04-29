@@ -1,7 +1,7 @@
-let navMain = document.querySelector('.header-nav');
-let navToggle = document.querySelector('.header-nav__toggle');
-let modal = document.querySelector('.modal-overlay');
-let btnAdd = document.querySelectorALL('btn--add');
+var navMain = document.querySelector('.header-nav');
+var navToggle = document.querySelector('.header-nav__toggle');
+var modal = document.querySelector('.modal-overlay');
+var btnAdd = document.querySelectorALL('.btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
@@ -25,12 +25,10 @@ for(var i = 0; i < btnAdd.length; i++) {
   })
 }
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+window.addEventListener("keydown", function (evt){
+  if (evt.keyCode === 27 && modal.classList.contains("modal-overlay--open")) {
     evt.preventDefault();
-    if (modal.classList.contains("modal-overlay--open")) {
-      modal.classList.remove("modal-overlay--open");
-    }
+    modal.classList.remove("modal-overlay--open");
   }
 });
 

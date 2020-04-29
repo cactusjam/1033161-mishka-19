@@ -10,7 +10,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
-var webp = require('gulp-webp');
+var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
@@ -40,7 +40,6 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
@@ -99,5 +98,4 @@ gulp.task("html", function () {
     .pipe(gulp.dest("source"));
 });
 
-gulp.task("build", gulp.series("css", "sprite", "html"));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series("css", "server"));
