@@ -26,15 +26,11 @@ for(var i = 0; i < btnAdd.length; i++) {
 }
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === 27 && modal.classList.contains("modal-overlay--open")) {
     evt.preventDefault();
-    if (modal.classList.contains("modal-overlay--open")) {
-      modal.classList.remove("modal-overlay--open");
-    }
+    modal.classList.remove("modal-overlay--open");
   }
 });
-
-
 
 // ------ карта --------
 var mapIp = document.querySelector('.map__ip');
