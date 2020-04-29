@@ -99,4 +99,5 @@ gulp.task("html", function () {
     .pipe(gulp.dest("source"));
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("build", gulp.series("css", "sprite", "html"));
+gulp.task("start", gulp.series("build", "server"));
