@@ -493,6 +493,11 @@
   display: block;
 }
 
+.order-form__radio:focus + .order-form__label::before,
+.order-form__check:focus + .order-form__label::before {
+  outline: 3px solid @blue-d;
+}
+
 .order-form__input {
 
   font-size: 19px;

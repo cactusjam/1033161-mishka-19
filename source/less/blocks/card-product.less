@@ -1,17 +1,15 @@
 .card-product {
   margin-top: 27px;
   margin-bottom: 29px;
-  border: 1px solid @gray;
   width: 260px;
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     flex-wrap: nowrap;
     margin-top: 0;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,17 +44,15 @@
   color: @greyish-brown;
   padding-bottom: 20px;
   margin-top: 5px;
-  padding-left: 28px;
 
   @media (min-width: @tablet-width) {
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 6px;
     padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 13px;
-    margin-top: 4px;
   }
 }
 
@@ -75,7 +71,6 @@
   line-height: 24px;
   margin: 0;
   margin-top: 28px;
-  padding-left: 28px;
 
   &--basket {
     width: 200px;
@@ -95,6 +90,7 @@
 .card-product__image {
   width: 260px;
   height: 195px;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 334px;
@@ -108,13 +104,18 @@
 }
 
 .card-product__description-wrapper {
+  box-sizing: border-box;
+  border: 1px solid @gray;
+  width: 260px;
+  padding-left: 27px;
+  padding-right: 25px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    padding-left: 27px;
+    padding-right: 32px;
     padding-top: 26px;
     width: 50%;
-    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
@@ -125,46 +126,40 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
 .card-product__price-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-left: 27px;
-  padding-right: 27px;
   padding-bottom: 26px;
   padding-top: 20px;
   border-top: 1px solid #f1f1f1;
-  width: 260px;
+  width: 100%;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     margin-top: auto;
-    padding-left: 5px;
     padding-top: 23px;
-    padding-right: 30px;
     width: unset;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 2px;
   }
 }
 
 .card-product__image-link {
+  display: block;
+
   @media (min-width: @tablet-width) {
     width: 50%;
   }
 
   @media (min-width: @desktop-width) {
     max-height: 462px;
-    width: unset;
+    width: 100%;
   }
 }
 
