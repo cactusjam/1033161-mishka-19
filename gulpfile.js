@@ -15,6 +15,9 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
+
+// CSS
+
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -30,29 +33,25 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("server", function () {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+// sprite
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
 });
 
+// HTML
 
-
-// Less to CSS
-
-gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [path.join(__dirname, 'less', 'includes')]
-    }))
-    .pipe(gulp.dest('./public/css'));
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("source"));
 });
 
 // image
@@ -71,6 +70,8 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+// webP
+
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({
@@ -79,23 +80,20 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-// sprite
+// server
 
-gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+gulp.task("server", function () {
+  server.init({
+    server: "source/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("source"));
-});
-
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("build", gulp.series("css", "sprite", "html"));
+gulp.task("start", gulp.series("build", "server"));
