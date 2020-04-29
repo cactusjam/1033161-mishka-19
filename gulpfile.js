@@ -1,17 +1,19 @@
 "use strict";
 
 var gulp = require("gulp");
-var imagemin = require("gulp-imagemin");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
 var server = require("browser-sync").create();
-
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var path = require('path');
 var csso = require("gulp-csso");
+var imagemin = require("gulp-imagemin");
+var webp = require('gulp-webp');
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -38,10 +40,10 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
 
 
 // Less to CSS
@@ -49,7 +51,7 @@ gulp.task("start", gulp.series("css", "server"));
 gulp.task('less', function () {
   return gulp.src('./less/**/*.less')
     .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
+      paths: [path.join(__dirname, 'less', 'includes')]
     }))
     .pipe(gulp.dest('./public/css'));
 });
@@ -58,10 +60,43 @@ gulp.task('less', function () {
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.mozjpeg({progressive: true}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("source/img"));
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
 });
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("source/img"));
+});
+
+// sprite
+
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("source"));
+});
+
+gulp.task("start", gulp.series("css", "server"));

@@ -1,7 +1,7 @@
 let navMain = document.querySelector('.header-nav');
 let navToggle = document.querySelector('.header-nav__toggle');
 let modal = document.querySelector('.modal-overlay');
-let btnAdd = document.getElementsByClassName('btn--add');
+let btnAdd = document.querySelectorALL('btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
