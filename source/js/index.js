@@ -1,7 +1,7 @@
 var navMain = document.querySelector('.header-nav');
 var navToggle = document.querySelector('.header-nav__toggle');
 var modal = document.querySelector('.modal-overlay');
-var btnAdd = document.querySelectorALL('.btn--add');
+var btnAdd = document.getElementsByClassName('btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
@@ -25,14 +25,12 @@ for(var i = 0; i < btnAdd.length; i++) {
   })
 }
 
-window.addEventListener("keydown", function (evt){
+window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27 && modal.classList.contains("modal-overlay--open")) {
     evt.preventDefault();
     modal.classList.remove("modal-overlay--open");
   }
 });
-
-
 
 // ------ карта --------
 var mapIp = document.querySelector('.map__ip');

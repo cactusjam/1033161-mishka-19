@@ -47,9 +47,11 @@
     "node": "8.16"
   },
   "dependencies": {
+    "del": "^5.1.0",
     "imagemin": "^7.0.1",
     "npx": "^10.2.2",
     "picturefill": "^3.0.3",
+    "pipeline": "^0.1.3",
     "plumber": "^0.4.8",
     "postcss": "^7.0.27",
     "sourcemap": "^0.1.0"
