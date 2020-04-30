@@ -102,11 +102,9 @@
 .order-form__description {
   font-size: 13px;
   color: @greyish-brown;
-  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
-    margin-bottom: 55px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -140,7 +138,7 @@
     top: 67px;
 
     &--type {
-      top: 135px;
+      top: 74px;
     }
 
     &--mail {
@@ -159,6 +157,8 @@
 }
 
 .order-form__wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     &--gray {
       background-color: @base-white;
@@ -166,8 +166,12 @@
   }
 
   &--type {
+    padding-top: 24px;
+
+    @media (min-width: @tablet-width) {
     position: relative;
     padding-top: 56px;
+    }
   }
 }
 
@@ -439,12 +443,6 @@
   @media (min-width: @desktop-width) {
     padding-left: 113px;
     margin: 0;
-  }
-
-  &--type {
-    @media (min-width: @desktop-width) {
-      margin-top: 56px;
-    }
   }
 
   &--color {
