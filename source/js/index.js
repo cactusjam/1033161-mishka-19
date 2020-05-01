@@ -1,7 +1,7 @@
 var navMain = document.querySelector('.header-nav');
 var navToggle = document.querySelector('.header-nav__toggle');
 var modal = document.querySelector('.modal-overlay');
-var btnAdd = document.querySelectorAll('btn--add');
+var btnAdd = document.querySelectorAll('.btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
