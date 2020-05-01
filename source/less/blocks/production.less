@@ -22,6 +22,8 @@
 
   @media (min-width: @desktop-width) {
     width: 682px;
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -52,7 +54,7 @@
   font-size: 13px;
   color: @greyish-brown;
   margin: 0;
-  margin-top: 26px;
+  margin-top: 28px;
   padding-left: 34px;
   padding-right: 41px;
   order: 3;
@@ -66,9 +68,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 52px;
     width: 223px;
     padding-bottom: 46px;
+    padding-left: 0;
+    padding-right: 66px;
   }
 }
 
@@ -96,7 +99,9 @@
 
   @media (min-width: @desktop-width) {
     width: 230px;
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 61px;
+    margin-right: 57px;
   }
 }
 
@@ -130,9 +135,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-wrap: wrap;
-    height: 455px;
     padding-bottom: 0;
+    position: relative;
+    align-items: flex-end;
   }
 
   &:hover,
@@ -185,6 +190,7 @@
     flex-direction: column;
     padding-left: 52px;
     padding-top: 95px;
+    padding-right: 140px;
   }
 }
 
