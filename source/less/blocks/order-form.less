@@ -159,18 +159,19 @@
 .order-form__wrapper {
   position: relative;
 
-  @media (min-width: @tablet-width) {
-    &--gray {
-      background-color: @base-white;
-    }
 
-    &--type {
+  &--type {
+    padding-top: 24px;
+
+    @media (min-width: @tablet-width) {
       padding-top: 56px;
     }
   }
 
-  &--type {
-    padding-top: 24px;
+  &--gray {
+    @media (min-width: @tablet-width) {
+      background-color: @base-white;
+    }
   }
 }
 
