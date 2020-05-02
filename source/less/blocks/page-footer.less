@@ -3,11 +3,12 @@
 }
 
 .page-footer__inner.container {
-  padding-top: 26px;
-  min-height: 143px;
+  padding-top: 25px;
+  padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 50px;
+    padding-top: 52px;
+    padding-bottom: 50px;
   }
 }
 
@@ -22,11 +23,13 @@
 .page-footer__copiright {
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    padding: 0;
   }
 }
 
@@ -57,7 +60,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    padding-top: 0;
   }
 }
 

@@ -16,6 +16,12 @@
     width: 316px;
     display: block;
     margin-bottom: 0;
+    margin-right: 51px;
+    padding-bottom: 55px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -42,7 +48,7 @@
   font-size: 13px;
   line-height: 30px;
   color: @greyish-brown;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   margin-top: 5px;
 
   @media (min-width: @tablet-width) {
@@ -146,7 +152,12 @@
   @media (min-width: @tablet-width) {
     margin-top: auto;
     padding-top: 23px;
-    width: unset;
+    padding-left: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-top: 21px;
   }
 }
 

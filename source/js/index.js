@@ -1,7 +1,7 @@
-let navMain = document.querySelector('.header-nav');
-let navToggle = document.querySelector('.header-nav__toggle');
-let modal = document.querySelector('.modal-overlay');
-let btnAdd = document.getElementsByClassName('btn--add');
+var navMain = document.querySelector('.header-nav');
+var navToggle = document.querySelector('.header-nav__toggle');
+var modal = document.querySelector('.modal-overlay');
+var btnAdd = document.querySelectorAll('.btn--add');
 
 navMain.classList.remove('header-nav--nojs');
 
@@ -18,8 +18,8 @@ navToggle.addEventListener('click', function () {
 
 // ------заказать-----------
 
-for(var i = 0; i < btnAdd.length; i++) {
-  btnAdd[i].addEventListener("click", function(){
+for (var i = 0; i < btnAdd.length; i++) {
+  btnAdd[i].addEventListener("click", function () {
     event.preventDefault();
     modal.classList.add('modal-overlay--open');
   })
@@ -34,7 +34,9 @@ window.addEventListener("keydown", function (evt) {
 
 // ------ карта --------
 var mapIp = document.querySelector('.map__ip');
-mapIp.classList.remove('map__ip--nojs');
+if (mapIp) {
+  mapIp.classList.remove('map__ip--nojs');
+}
 
 if (document.querySelector('.map')) {
   var imgMap = document.querySelector('.map__wrapper');
@@ -51,12 +53,12 @@ if (document.querySelector('.map')) {
         center: coordinates
       });
 
-      marker = new google.maps.Marker({
-        position: coordinates,
-        map: map,
-        animation: google.maps.Animation.DROP,
-        icon: markerImg
-      });
+    marker = new google.maps.Marker({
+      position: coordinates,
+      map: map,
+      animation: google.maps.Animation.DROP,
+      icon: markerImg
+    });
   }
 
   function hideImgMap() {
