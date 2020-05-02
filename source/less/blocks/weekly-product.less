@@ -85,6 +85,16 @@
   text-align: center;
   position: relative;
   z-index: 1;
+
+  &:hover,
+  &:focus {
+    background-color: @greyish-brown;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .weekly-product__title {
