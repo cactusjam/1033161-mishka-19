@@ -14,10 +14,12 @@
   position: relative;
   width: 258px;
   order: 2;
+  min-height: 150px;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     order: 1;
+    min-height: 455px;
   }
 
   @media (min-width: @desktop-width) {
@@ -201,11 +203,5 @@
     padding-left: 52px;
     padding-top: 95px;
     padding-right: 140px;
-  }
-}
-
-.production__inner {
-  @media (min-width: @desktop-width) {
-    padding-top: 55px;
   }
 }
