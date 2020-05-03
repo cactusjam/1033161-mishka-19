@@ -55,7 +55,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
@@ -88,9 +90,10 @@ gulp.task("webp", function () {
 // js
 
 gulp.task("script", function () {
-  return gulp.src('./source/js/*.js')
-    .pipe(uglify( /* options */ ))
-    .pipe(concat('script.js'))
+  return gulp.src("./source/js/*.js")
+    .pipe(concat("main.js"))
+    .pipe(uglify())
+    .pipe(rename("main.min.js"))
     .pipe(gulp.dest('./build/js'));
 });
 
