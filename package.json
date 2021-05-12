@@ -57,7 +57,7 @@
     "picturefill": "^3.0.3",
     "pipeline": "^0.1.3",
     "plumber": "^0.4.8",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "sourcemap": "^0.1.0",
     "svg4everybody": "^2.1.9"
   }
